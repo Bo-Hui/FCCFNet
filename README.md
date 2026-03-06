@@ -45,14 +45,16 @@ If you have your own dataset, please use the `get_mean_std` function in `utils/d
 # Training & Test
 ## Training
 ```
-python train.py --img_size 512 --batch_size 8 --epochs 600 --learning_rate 0.001 --dataset sirst #SIRST
-python train.py --img_size 512 --batch_size 8 --epochs 600 --learning_rate 0.001 --dataset IRSTD-1k #IRSTD-1K
-python train.py --img_size 512 --batch_size 8 --epochs 600 --learning_rate 0.001 --dataset NUDT-SIRST #NUDT-SIRST
+python train.py --img_size 512 --batch_size 4 --epochs 600 --learning_rate 0.001 --dataset sirst #SIRST
+python train.py --img_size 512 --batch_size 4 --epochs 600 --learning_rate 0.001 --dataset IRSTD-1k #IRSTD-1K
+python train.py --img_size 256 --batch_size 8 --epochs 600 --learning_rate 0.001 --dataset NUDT-SIRST #NUDT-SIRST
 ```
 
 ## Test
 ```
-python val.py --dataset sirst --checkpoint your_checkpoint_path
+python val.py --img_size 512 --dataset sirst --checkpoint your_checkpoint_path #SIRST
+python val.py --img_size 512 --dataset IRSTD-1k --checkpoint your_checkpoint_path #IRSTD-1K
+python val.py --img_size 256 --dataset NUDT --checkpoint your_checkpoint_path #NUDT-SIRST
 ```
 
 ## Model check point
